@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ExtensionManifest Version="4.0" ExtensionBundleId="Ink" ExtensionBundleVersion="1.3.7"
+<ExtensionManifest Version="4.0" ExtensionBundleId="com.chrometaphore.ink" ExtensionBundleVersion="1.5.1"
 		ExtensionBundleName="Ink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Author>
 		<![CDATA[chrometaphore.com]]>
 	</Author>	<Contact mailto="info@chrometaphore.com">
-		<![CDATA[Ink. Document your layers!
-http://ink.chrometaphore.com]]>
+		<![CDATA[Ink. Document your layers! http://ink.chrometaphore.com]]>
 	</Contact>	<ExtensionList>
-		<Extension Id="Ink.extension1" Version="1.0" />
+		<Extension Id="com.chrometaphore.ink.extension1" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
-			<Host Name="PHXS" Version="[14.0,16.9]" />
-			<Host Name="PHSP" Version="[14.0,16.9]" />
+			<Host Name="PHXS" Version="[14.0,99.9]" />
+			<Host Name="PHSP" Version="[14.0,99.9]" />
 		</HostList>
 		<LocaleList>
 			<Locale Code="All" />
@@ -24,7 +23,7 @@ http://ink.chrometaphore.com]]>
 		</RequiredRuntimeList>
 	</ExecutionEnvironment>
 	<DispatchInfoList>
-		<Extension Id="Ink.extension1">
+		<Extension Id="com.chrometaphore.ink.extension1">
 			<DispatchInfo >
 				<Resources>
 				<MainPath>./index.html</MainPath>

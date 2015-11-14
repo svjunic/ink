@@ -200,8 +200,11 @@ p {
 	float:left;
 	width:8px;
 	height:8px;
-	background-color:#28e4b9;
+	background-color:#ff1e07;
 	margin: 6px;
+}
+#output_text_color_preview {
+	background-color:#ffffff;	
 }
 
 /* main ink btn */

@@ -350,6 +350,7 @@ function jsxcall_ink( args )
                     inkActionStr += ",";  
                 }
             } 
+            
             evalScript("$._ext_INK.run('" + inkActionStr + "')");
         }
         catch( e )
