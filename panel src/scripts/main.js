@@ -24,6 +24,7 @@ document.addEventListener('onInkUISettings', function (e)
     setColorPicker( "text_bubble_color", splitUserSettings[7], "n" );
     setCounter("text_size",splitUserSettings[8], "n");
     setCounter("ruler_stroke",splitUserSettings[9], "n");
+    setCounter("color_format",splitUserSettings[10], "n");
 
     //@status "on" (CSS mode) | "off" (PS mode)
     //if (splitUserSettings[8] == "css") {
@@ -107,13 +108,33 @@ function stepTextSize(target, store) {
     setCounter("text_size",newVal, store);
 }
 
+function stepColorFormat( target, store )
+{
+     var val = getCounter("color_format").toString();
+
+     //direction is really irrelevant since this is
+     //more like a switch. let's just reverse the value.
+     //var direction = target.getAttribute('class').toString();
+
+     if ( val =="css" )
+     {
+        //switch to hex
+        setCounter("color_format","hex", store);  
+     }
+     else
+     {
+        //switch to css
+        setCounter("color_format","css", store);  
+     }
+}
+
 //number step function called via UI
 function stepRulerStroke(target, store) {
     var min = 1;
     var max = 4;
     var val = parseInt( getCounter("ruler_stroke") );
     var newVal;
-    console.log(val);
+    
     var direction = target.getAttribute('class').toString();
     if ( direction == "next" ) {
         newVal = val + 1; 
@@ -315,6 +336,9 @@ function getUISettings() {
 
     //9: "ruler_stroke"
     uiSettings.push( getCounter("ruler_stroke") );
+
+    //10: "color_format"
+    uiSettings.push( getCounter("color_format") );
 
     //"inline_output_type"
     //uiSettings.push( getInlineDocType() );

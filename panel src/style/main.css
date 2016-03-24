@@ -15,8 +15,9 @@ body {
 	float:left;
 }
 .row .content {
-	width:220px;
+	width:auto;
 	margin:auto;
+	padding: 0 10px;
 }
 .row.centered {
 	width:100%;
@@ -33,6 +34,10 @@ body {
 p {
 	font-size:9px;
 	letter-spacing: 0.2em;
+}
+.content p {
+	font-size:12px;
+	letter-spacing: 0;
 }
 
 /* selector component */
